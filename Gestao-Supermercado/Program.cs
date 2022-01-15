@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace Login
+namespace Gestao_Supermercado
 {
     class Program
     {

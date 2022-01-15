@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Login
+namespace Gestao_Supermercado
 {
     class ListaDeUtilizadores
     {
