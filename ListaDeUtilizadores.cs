@@ -17,13 +17,17 @@ namespace Gestao_Supermercado
         }
 
 
-        /*LER LISTA*/
-        public void LerLista()
+        /*LER LISTA*/     //
+        public string ListarUtilizadores()
         {
+            string resultado = "Utilizadores: \n";
+
             foreach (Utilizador c in this.listaDeUtilizadores)
             {
-                Console.WriteLine(c);
+                resultado += "\t" + c + "\n";
             }
+
+            return resultado;
         }
 
         /*ADICIONAR UM NOVO UTILIZADOR*/
@@ -31,12 +35,15 @@ namespace Gestao_Supermercado
         {
             Console.WriteLine("Indique o nome: ");
             string nome = Console.ReadLine();
-            Console.WriteLine("Indique o Email: ");
-            string email = Console.ReadLine();
             Console.WriteLine("Defina a Password: ");
             string password = Console.ReadLine();
+            Console.WriteLine("Qual o seu Grupo: \n");
+            Console.WriteLine("\t 1 - Gerente; \n");
+            Console.WriteLine("\t 2 - Repositor; \n");
+            Console.WriteLine("\t 3 - Caixa. \n");
+            string grupoDeUtilizador = Console.ReadLine();
 
-            listaDeUtilizadores.Add(new Utilizador(nome, email, password));
+            listaDeUtilizadores.Add(new Utilizador(nome, password, grupoDeUtilizador));
         }
 
         public Utilizador EncontrarUtilizador(string nome)
@@ -45,6 +52,7 @@ namespace Gestao_Supermercado
             {
                 if (c.Nome == nome)
                 {
+                    Console.WriteLine(c.Nome);
                     return c;
                 }
             }
@@ -53,9 +61,10 @@ namespace Gestao_Supermercado
 
         public void EliminarUtilizador()
         {
+            Console.WriteLine("Escreva o nome: ");
             listaDeUtilizadores.Remove(EncontrarUtilizador(Console.ReadLine()));
             Console.WriteLine("Restantes da Lista: ");
-            LerLista();
+            ListarUtilizadores();
         }
 
         public void EditaUtilizador()
@@ -63,14 +72,14 @@ namespace Gestao_Supermercado
             EditaUtilizador();
             AddUtilizador();
             Console.WriteLine("Adicionado com sucesso!!");
-            LerLista();
+            ListarUtilizadores();
         }
 
         public void EliminarTodos()
         {
-            string path = "C:\\Users\\Win10\\Desktop\\Linguagem de Programação\\Projeto final\\Gestao-Supermercado\\Gestao-Supermercado\\bin\\Debug\\net5.0\\Utilizadores.txt";
+            string path = Directory.GetCurrentDirectory()+ "/Utilizadores.txt";
+            //string path = "C:\\Users\\Win10\\Desktop\\Linguagem de Programação\\Projeto final\\Gestao-Supermercado\\Gestao-Supermercado\\bin\\Debug\\net5.0\\Utilizadores.txt";
             bool resultado = File.Exists(path);
-
             if (resultado == true)
             {
                 Console.WriteLine("Apagando...");
@@ -110,8 +119,9 @@ namespace Gestao_Supermercado
         {
             string path = Directory.GetCurrentDirectory();
             string fileName = "/Utilizadores.txt";
-            string caminho = "C:\\Users\\Win10\\Desktop\\Linguagem de Programação\\Projeto final\\Gestao-Supermercado\\Gestao-Supermercado\\bin\\Debug\\net5.0\\Utilizadores.txt";
+            string caminho = Directory.GetCurrentDirectory() + "/Utilizadores.txt";
             bool resultado = File.Exists(caminho);
+
 
             //Verifica se o caminho existe senao executa else
             if (resultado == true)
@@ -177,7 +187,7 @@ namespace Gestao_Supermercado
                 switch (escolhaDoUtilizador1)
                 {
                     case 0:
-                        Environment.Exit(0);
+                        //Environment.Exit(0);
                         break;
                     case 1:
                         AddUtilizador();
@@ -187,7 +197,8 @@ namespace Gestao_Supermercado
                         lerFicheiro();
                         break;
                     case 3:
-                        EliminarUtilizador();
+                        
+                        //EliminarUtilizador();
                         break;
                     case 4:
                         EliminarTodos();

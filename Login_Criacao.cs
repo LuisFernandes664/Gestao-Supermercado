@@ -6,29 +6,21 @@ using System.Threading.Tasks;
 
 namespace Gestao_Supermercado
 {
-    enum grupoDeUtilizador
+    class Login_Criacao : Utilizador
     {
-        Gerente = 1,
-        Repositor = 2,
-        Caixa = 3
-    }
-    class Login_Criacao
-    {
-        private string nome;
-        private string password;
-
-        public Login_Criacao(string nome, string password)
+        public Login_Criacao(string nome, string password, string grupoDeUtilizador) : base(nome, password, grupoDeUtilizador)
         {
-            this.nome = nome;
-            this.password = password;
+
         }
 
-        public string Nome { get => nome; set => nome = value; }
-        public string Password { get => password; set => password = value; }
-
-
-        public void EscreveLogin()
+        public override string ToString()
         {
+            return "Nome: " + nome + " | Password: " + Password + " | Grupo: " + grupoDeUtilizador;
+        }
+
+        public bool EscreveLogin()
+        {
+            
             Console.Clear();
             Console.WriteLine("Coloque o seu Nome: ");
             string usr = Console.ReadLine();
@@ -36,15 +28,17 @@ namespace Gestao_Supermercado
             string pass = Console.ReadLine();
 
             //(usr == ("admin") && pass ==("admin"))
-            if (usr == nome && pass == password)
+            if (usr == nome && pass == Password)
             {
                 Console.Clear();
+                return true;
             }
             else
             {
                 Console.WriteLine("Utilizador ou Password errada!");
                 //Para fechar tudo
                 Environment.Exit(0);
+                return false;
             }
         }
 
