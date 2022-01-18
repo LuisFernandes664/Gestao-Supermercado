@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Gestao_Supermercado
+namespace Vendas
 {
     class Menus : VendaDeProdutos
     {

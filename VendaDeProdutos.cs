@@ -4,13 +4,13 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-namespace Gestao_Supermercado
+namespace Vendas
 {
     class VendaDeProdutos
     {
         public List<Produto> listaDeProdutos;
 
-        public VendaDeProdutos()
+        public ListaDeProdutos()
         {
             this.listaDeProdutos = new List<Produto>();
         }
