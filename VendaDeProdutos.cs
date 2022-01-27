@@ -4,34 +4,33 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-namespace Vendas
+
+namespace Gestao_Supermercado
 {
     class VendaDeProdutos
     {
         public List<Produto> listaDeProdutos;
 
-        public ListaDeProdutos()
-        {
-            this.listaDeProdutos = new List<Produto>();
-        }
-
         int escolhaDoUtilizador = -1;
 
-        /*public void VenderProduto()
+        public void VenderProduto()
         {
             Console.WriteLine("Indique a categoria: ");
             string Categoria = Console.ReadLine();
             Console.WriteLine("Indique o nome: ");
             string NomeProduto = Console.ReadLine();
-            Console.WriteLine("Indique a quantidade inicial: ");
+            Console.WriteLine("Indique a quantidade: ");
             int Quantidade = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Indique o preço: ");
-            float Preco = float.Parse(Console.ReadLine());
 
-               // AQUI FICA REMOVE EM VEZ DE ADD??
-         
-            listaDeProdutos.Add(new Produto(Categoria, NomeProduto, Quantidade, Preco));
-        }*/
+            RemoverDaLista();
+        }
+
+        public void RemoverDaLista()
+        {
+            listaDeProdutos.Remove(EncontrarProduto(Console.ReadLine()));
+            Console.WriteLine("Comprado!");
+            LerListaProduto();
+        }
 
         public void LerListaProduto()
         {
@@ -52,14 +51,6 @@ namespace Vendas
             return null;
         }
 
-        public void AdicionarQuantidade(Produto produto)
-        {
-            Console.WriteLine("Indique a quantidade que quer comprar: ");
-            int Quantida = produto.Quantidade - Convert.ToInt32(Console.ReadLine());
-
-            //fazer um if sobre se tiver um numero maior do que a quantidade, dá erro!
-        }
-
         public void MenuStock()
         {
             int escolhaDoUtilizador1 = -1;
@@ -68,6 +59,7 @@ namespace Vendas
                 Console.WriteLine("0 - Sair");
                 Console.WriteLine("1 - Comprar Produto");
                 Console.WriteLine("2 - Ver Lista de Produtos");
+                // falta adicionar linhas a fatura conforme os produtos serem adicionados
 
                 bool consegui1 = false;
 
@@ -96,7 +88,5 @@ namespace Vendas
                 Console.Clear();
             } while (escolhaDoUtilizador1 != 0);
         }
-
-
     }
 }
