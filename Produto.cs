@@ -1,6 +1,8 @@
 ﻿using System;
 namespace Gestao_Supermercado
 {
+    [Serializable]
+
     public enum Categoria
     {
         Congelados = 1,
@@ -8,12 +10,16 @@ namespace Gestao_Supermercado
         Enlatados = 3
     }
 
+    [Serializable]
+
     public enum TipoQuantidade
     {
         Kg = 1,
         L = 2,
         Unidades = 3
     }
+
+    [Serializable]
 
     public class Produto
     {
@@ -23,12 +29,18 @@ namespace Gestao_Supermercado
         public TipoQuantidade tipoQuantidade;
         private float preco;
 
-        public Produto(Categoria categoria, string nomeProduto, float quantidade, TipoQuantidade tipoQuantidade, float preco)
+        public Produto(string categoria, string nomeProduto, float quantidade, string tipoQuantidade, float preco)
         {
-            this.categoria = categoria;
+            if (!Enum.TryParse(categoria, out this.categoria))
+            {
+                this.categoria = Categoria.Prateleira;
+            }
             this.nomeProduto = nomeProduto;
             this.quantidade = quantidade;
-            this.tipoQuantidade = tipoQuantidade;
+            if (!Enum.TryParse(tipoQuantidade, out this.tipoQuantidade))
+            {
+                this.tipoQuantidade = TipoQuantidade.Unidades;
+            }
             this.preco = preco;
         }
 
@@ -52,7 +64,7 @@ namespace Gestao_Supermercado
 
         public override string ToString()
         {
-            return "Categoria: " + categoria + " | Nome: " + NomeProduto + " | Quantidade em stock: " + Quantidade + tipoQuantidade + " | Preço: " + Preco;
+            return "Categoria: " + categoria + " | Nome: " + NomeProduto + " | Quantidade em stock: " + Quantidade + " " + tipoQuantidade + " | Preço: " + Preco + "€";
         }
     }
 }
