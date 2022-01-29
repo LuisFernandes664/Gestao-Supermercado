@@ -24,14 +24,27 @@ namespace Gestao_Supermercado
 
             RemoverDaLista();
         }
-
         public void RemoverDaLista()
         {
+            /*
+            //MUDAR ALGO PARA REMOVER APENAS A QUANTIDADE SELECIONADA
             listaDeProdutos.Remove(EncontrarProduto(Console.ReadLine()));
             Console.WriteLine("Comprado!");
-            LerListaProduto();
-        }
+            LerListaProduto();*/
 
+            var tw = File.Open(@"D:\faturas.txt", FileMode.Append);
+            tw.Write("Text1");
+
+
+            // fazer a conta do que esta la atualmente menos o que a quantidade que o utilizador quer comprar
+            // e basicamente   ||
+            //                \  /
+            /*                 \/
+             * eu tenho x, o armazem tem y
+             * y-x=h
+             * atualizar o ficheiro para o resultado de h
+            */
+        }
         public void LerListaProduto()
         {
             foreach (Produto p in this.listaDeProdutos)
@@ -50,7 +63,6 @@ namespace Gestao_Supermercado
             }
             return null;
         }
-
         public void MenuStock()
         {
             int escolhaDoUtilizador1 = -1;
@@ -83,7 +95,6 @@ namespace Gestao_Supermercado
                         Console.WriteLine("Sem seleção!");
                         break;
                 }
-
                 Console.ReadLine();
                 Console.Clear();
             } while (escolhaDoUtilizador1 != 0);
