@@ -1,0 +1,16 @@
+C:\Users\Win10\Desktop\Linguagem de Programação\gestao_supermercado\gestaoSupermercado\gestaoSupermercado\bin\Debug\net5.0\gestaoSupermercado.exe
+C:\Users\Win10\Desktop\Linguagem de Programação\gestao_supermercado\gestaoSupermercado\gestaoSupermercado\bin\Debug\net5.0\gestaoSupermercado.deps.json
+C:\Users\Win10\Desktop\Linguagem de Programação\gestao_supermercado\gestaoSupermercado\gestaoSupermercado\bin\Debug\net5.0\gestaoSupermercado.runtimeconfig.json
+C:\Users\Win10\Desktop\Linguagem de Programação\gestao_supermercado\gestaoSupermercado\gestaoSupermercado\bin\Debug\net5.0\gestaoSupermercado.runtimeconfig.dev.json
+C:\Users\Win10\Desktop\Linguagem de Programação\gestao_supermercado\gestaoSupermercado\gestaoSupermercado\bin\Debug\net5.0\gestaoSupermercado.dll
+C:\Users\Win10\Desktop\Linguagem de Programação\gestao_supermercado\gestaoSupermercado\gestaoSupermercado\bin\Debug\net5.0\ref\gestaoSupermercado.dll
+C:\Users\Win10\Desktop\Linguagem de Programação\gestao_supermercado\gestaoSupermercado\gestaoSupermercado\bin\Debug\net5.0\gestaoSupermercado.pdb
+C:\Users\Win10\Desktop\Linguagem de Programação\gestao_supermercado\gestaoSupermercado\gestaoSupermercado\obj\Debug\net5.0\gestaoSupermercado.csproj.AssemblyReference.cache
+C:\Users\Win10\Desktop\Linguagem de Programação\gestao_supermercado\gestaoSupermercado\gestaoSupermercado\obj\Debug\net5.0\gestaoSupermercado.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Win10\Desktop\Linguagem de Programação\gestao_supermercado\gestaoSupermercado\gestaoSupermercado\obj\Debug\net5.0\gestaoSupermercado.AssemblyInfoInputs.cache
+C:\Users\Win10\Desktop\Linguagem de Programação\gestao_supermercado\gestaoSupermercado\gestaoSupermercado\obj\Debug\net5.0\gestaoSupermercado.AssemblyInfo.cs
+C:\Users\Win10\Desktop\Linguagem de Programação\gestao_supermercado\gestaoSupermercado\gestaoSupermercado\obj\Debug\net5.0\gestaoSupermercado.csproj.CoreCompileInputs.cache
+C:\Users\Win10\Desktop\Linguagem de Programação\gestao_supermercado\gestaoSupermercado\gestaoSupermercado\obj\Debug\net5.0\gestaoSupermercado.dll
+C:\Users\Win10\Desktop\Linguagem de Programação\gestao_supermercado\gestaoSupermercado\gestaoSupermercado\obj\Debug\net5.0\ref\gestaoSupermercado.dll
+C:\Users\Win10\Desktop\Linguagem de Programação\gestao_supermercado\gestaoSupermercado\gestaoSupermercado\obj\Debug\net5.0\gestaoSupermercado.pdb
+C:\Users\Win10\Desktop\Linguagem de Programação\gestao_supermercado\gestaoSupermercado\gestaoSupermercado\obj\Debug\net5.0\gestaoSupermercado.genruntimeconfig.cache
