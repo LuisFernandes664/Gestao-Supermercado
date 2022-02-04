@@ -175,12 +175,6 @@ namespace Gestao_Supermercado
                     Console.WriteLine("Nova quantidade em stock: " + p.NomeProduto + " -> " + p.Quantidade + " " + p.tipoQuantidade);
                     Console.ResetColor();
                 }
-                else if (p.NomeProduto != nome)
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Produto não encontrado");
-                    Console.ResetColor();
-                }
             }
             return null;
         }
@@ -504,12 +498,12 @@ namespace Gestao_Supermercado
                 {
                     Compras();
                 }
-                else if (u.NomeUtilizador != nome || u.Password != password)
+                /*else if (u.NomeUtilizador != nome || u.Password != password)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Login errado!");
                     Console.ResetColor();
-                }
+                }*/
             }
             return null;
         }
@@ -566,7 +560,7 @@ namespace Gestao_Supermercado
         {
             foreach (Fatura f in this.listaDeCompras)
             {
-                float total = f.NomeProduto.Sum(x => Convert.ToInt32(f.Preco));
+                float total =+ f.Preco;
                 Console.WriteLine(total + "€");
             }
         }
@@ -636,7 +630,7 @@ namespace Gestao_Supermercado
 
         public Fatura EncontrarArtigo(string nome)
         {
-            foreach (Fatura f in this.listaDeProdutos)
+            foreach (Fatura f in this.listaDeCompras)
             {
                 if (f.NomeProduto == nome)
                 {
@@ -658,7 +652,6 @@ namespace Gestao_Supermercado
             listaDeCompras.Remove(EncontrarArtigo(Console.ReadLine()));
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Produto retirado com sucesso");
-            LerListaProduto();
             Console.ResetColor();
         }
 
@@ -698,7 +691,7 @@ namespace Gestao_Supermercado
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.WriteLine("****LISTA DE ARTIGOS**** \n");
                         Console.ResetColor();
-                        EncontrarCongelados();
+                        ListarPorCategoria();
                         break;
                     case 2:
                         Console.ForegroundColor = ConsoleColor.Yellow;

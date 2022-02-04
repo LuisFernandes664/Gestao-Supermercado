@@ -24,6 +24,7 @@ namespace Gestao_Supermercado
             FileStream f = File.Create(nomeDoFicheiro);
             b.Serialize(f, s.listaDeProdutos);
             b.Serialize(f, s.listaDeUtilizadores);
+            b.Serialize(f, s.listaDeCompras);
             f.Close();
         }
 

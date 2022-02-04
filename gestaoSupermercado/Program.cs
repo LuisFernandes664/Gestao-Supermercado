@@ -7,8 +7,8 @@ namespace Gestao_Supermercado
     {
         static void Main(string[] args)
         {
+            /*Utilizador u1 = new Utilizador("Gerente", "Apu", "apu@mercado.pt", "apu");
             Utilizador u2 = new Utilizador("Repositor", "Jose", "jose@mercado.pt", "jose");
-            Utilizador u1 = new Utilizador("Gerente", "Apu", "apu@mercado.pt", "apu");
             Utilizador u3 = new Utilizador("Caixa", "Maria", "maria@mercado.pt", "maria");
 
             Produto p1 = new Produto("Congelados", "Robalo", 10, "Kg", 3);
@@ -28,9 +28,10 @@ namespace Gestao_Supermercado
             s1.Login();
 
             Gravador.GravarSM(s1);
-            Gravador.GravarDuasListas(s1);
+            Gravador.GravarDuasListas(s1);*/
 
-            //SuperMercado s1 = Gravador.LerFicheiro();
+            SuperMercado s1 = Gravador.LerFicheiro();
+            Gravador.GravarSM(s1);
             s1.Login();
         }
     }
